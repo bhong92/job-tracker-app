@@ -1,0 +1,21 @@
+<head>
+    <title>Skills Widget</title>
+    <script src="{{ url_for('static', filename = 'scripts/skills-modal.mjs') }}" defer></script>
+</head>
+<div class="skill-widget">
+    <div id={{ skill.id }} class="skill-widget-data">
+        <div class="widget-data-container">
+            <span class="data-span">{{ skill.name }}</span>
+        </div>
+    </div>
+    <div id="edit-skill" name={{ skill.name }} itemid={{ skill.id }}>
+        <button class="widget-button skill-edit-button" onclick="showEditModal()">
+            <i class="fa-solid fa-pen edit-icon"></i>
+        </button>
+    </div>
+    <div id="delete-skill" name={{ skill.name }} itemid={{ skill.id }}>
+        <button class="widget-button skill-delete-button" onclick="deleteSkill() ">
+            <i class="fa-solid fa-trash-can"></i>
+        </button>
+    </div>
+</div>
